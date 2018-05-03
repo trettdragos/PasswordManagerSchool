@@ -31,7 +31,6 @@ namespace PasswordManager
             MySqlConnection conn = new MySqlConnection(connStr);
             try
             {
-                Console.WriteLine("Connecting to MySQL...");
                 conn.Open();
 
                 string sql = "SELECT NAME FROM users WHERE NAME='"+email+"' AND PASSWORD='"+pass+"'";
@@ -39,21 +38,24 @@ namespace PasswordManager
                 object result = cmd.ExecuteScalar();
                 if (result != null)
                 {
-                    Console.WriteLine("Number of countries in the world database is: " + result);
+                    Console.WriteLine("user is: " + result);
                     DashBoard dashBoard= new DashBoard(result.ToString());
                     dashBoard.Show();
-                    this.Hide();                    
+                    //this.Close();
+                    this.Hide();    
+                }
+                else
+                {
+                    MessageBox.Show("incorrect username or password");
                 }
 
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
-                MessageBox.Show("incorrect username or password");
             }
 
             conn.Close();
-            Console.WriteLine("Done.");
         }
 
         private void Form1_Load_1(object sender, EventArgs e)
