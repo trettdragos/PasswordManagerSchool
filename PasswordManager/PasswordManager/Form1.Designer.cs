@@ -32,6 +32,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.emailTextBox = new System.Windows.Forms.TextBox();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -46,7 +47,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(116, 226);
+            this.button2.Location = new System.Drawing.Point(13, 226);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 1;
@@ -70,9 +71,20 @@
             this.passwordTextBox.TabIndex = 3;
             this.passwordTextBox.Text = "password";
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(94, 226);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(97, 23);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Create Account";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.emailTextBox);
             this.Controls.Add(this.button2);
@@ -91,6 +103,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox emailTextBox;
         private System.Windows.Forms.TextBox passwordTextBox;
+        private System.Windows.Forms.Button button3;
     }
 }
 

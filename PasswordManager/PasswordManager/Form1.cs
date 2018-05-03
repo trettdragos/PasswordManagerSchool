@@ -62,5 +62,12 @@ namespace PasswordManager
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            CreateAccount create = new CreateAccount();
+            create.ShowDialog();
+            this.Hide();
+        }
     }
 }
